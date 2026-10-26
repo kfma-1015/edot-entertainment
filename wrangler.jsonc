@@ -1,8 +1,23 @@
 {
   "name": "edot-entertainment",
+  "main": "./worker.js",
   "compatibility_date": "2026-10-25",
   "assets": {
-    "directory": "./",
-    "not_found_handling": "404-page"
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "kfma1015@gmail.com"
+    }
+  ],
+  "vars": {
+    "CONTACT_DESTINATION": "kfma1015@gmail.com",
+    "CONTACT_SENDER": "hello@edot-entertainment.com"
   }
 }

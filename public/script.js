@@ -1,0 +1,82 @@
+const copy={zh:{navHome:'首頁',navServices:'服務項目',navAbout:'關於我們',navExperience:'Live 同步展演',navContact:'聯絡我們',emailLabel:'聯絡我們',heroTitle:'讓精彩，<br><em>不只</em>發生在現場。',heroDescription:'將演唱會與精彩活動帶進更多場域，<br>讓無法到場的觀眾，也能在電影院等Live 同步展演<br>同步感受現場的熱度與感動。',heroPrimary:'探索我們的服務',heroSecondary:'了解 Live 同步展演',servicesTitle:'我們的服務',servicesIntro:'讓現場的感動跨越距離，延伸更多可能。',s1Title:'Live 同步展演',s1Body:'將演唱會、音樂節、品牌活動等即時傳送至電影院、展演空間或其他場域，擴大觀眾參與。',s2Title:'小型展演活動',s2Body:'策劃與執行各式小型展演，打造專屬的音樂與娛樂體驗，連結更多觀眾與品牌。',s3Title:'活動行銷',s3Body:'整合線上直播與線下活動，提供內容製作、社群推廣與合作行銷，放大活動影響力。',cinemaTitle:'讓精彩跨越場域，<br>讓感動同步發生。',cinemaDescription:'透過即時影音與跨場域展演，將演唱會及精彩活動延伸至更多城市與空間，讓不同地點的觀眾共享 Live 的熱度與感動。',imageNote:'※ 圖片為 AI 生成情境示意，非實際合作案例。',cinemaLink:'洽詢合作',aboutTitle:'讓精彩，不只發生在現場。',aboutText:'藝點娛樂 E.DOT Entertainment 致力以影音與活動創意，連結演出者、品牌與更多觀眾。從Live 同步展演到小型展演與活動行銷，打造更有可能的現場體驗。',contactTitle:'下一場精彩，從這裡開始。',contactText:'有Live 同步展演、展演或活動合作想法？歡迎與我們聯繫。',pageServicesTitle:'讓現場，延伸更多可能。',pageServicesLead:'從跨場域同步展演，到小型展演與活動行銷，讓每一次精彩被更多人看見。',pageAboutTitle:'關於藝點娛樂',aboutPunch:'不同現場，同一份熱愛。',aboutPunchEn:'Different Venues. One Shared Passion.',aboutBrandIntro:'E.DOT 藝點娛樂以創意與科技連結演出者、品牌與更多觀眾，將 Live 的感動延伸到更多場域，讓熱愛不受距離限制。',valueConnectTitle:'連結社群',valueConnectBody:'讓更多喜愛同一個舞台的人，在線上線下相遇。',valueExtendTitle:'拓展場域',valueExtendBody:'將精彩延伸到不同城市與場域，創造更多參與 Live 的可能。',valuePassionTitle:'延續熱愛',valuePassionBody:'用內容與科技，讓每一份熱愛持續被看見、被延續。',brandStoryTitle:'品牌理念',brandStoryBody:'E.DOT 希望成為連結粉絲、內容與場域的橋樑，透過Live 同步展演、小型展演與活動行銷，打造更多值得一起參與的 Live 體驗。',contactRefreshTitle:'下一場精彩，<br>從這裡開始。',contactRefreshLead:'有Live 同步展演、展演或活動合作想法？<br>歡迎與我們聯繫。',contactTopic1:'Live 同步展演',contactTopic1Body:'演唱會、活動同步延伸至更多場域',contactTopic2:'展演企劃',contactTopic2Body:'小型展演、主題活動、品牌合作',contactTopic3:'活動行銷',contactTopic3Body:'內容企劃、社群推廣、整合執行',pageAboutLead:'以創意與科技，讓精彩跨越場域。',pageVenueTitle:'讓精彩跨越場域，讓感動同步發生。',pageVenueLead:'透過即時影音與跨場域展演，讓不同地點的觀眾共享 Live 的熱度與感動。',pageContactTitle:'一起創造下一場精彩。',pageContactLead:'想討論Live 同步展演、展演企劃或活動行銷？歡迎寫信與我們聊聊。',detailA:'Live 同步展演',detailAText:'讓主場館的精彩透過同步影像和聲音延伸到電影院、展演空間及其他合作場地。',detailB:'小型展演活動',detailBText:'以貼近觀眾的現場體驗為核心，規劃小型表演、品牌活動與主題展演。',detailC:'活動行銷',detailCText:'結合內容企劃、社群溝通與線上線下推廣，讓活動觸及更多目標觀眾。',ctaTitle:'準備開始合作了嗎？',ctaLabel:'與我們聯繫',venueHowTitle:'跨場域 Live 體驗',venueHowText:'透過即時影音連結不同城市與合作場域，讓更多觀眾共同參與同一場演出。實際呈現形式依活動規劃而定。'},en:{navHome:'Home',navServices:'Services',navAbout:'About',navExperience:'Live Experience',navContact:'Contact',emailLabel:'Contact us',heroTitle:'Beyond the Venue.<br><em>Connected</em> by Live.',heroDescription:'Bring concerts and extraordinary events to more locations, so audiences can share the excitement live in cinemas and other partner venues.',heroPrimary:'Explore our services',heroSecondary:'Explore Live Experience',servicesTitle:'Our Services',servicesIntro:'More audiences. More ways to experience the moment.',s1Title:'Live Experience',s1Body:'Relay concerts, festivals and brand events live to cinemas, performance spaces and other locations to welcome more audiences.',s2Title:'Live Events',s2Body:'Plan and deliver intimate showcases that bring music, entertainment, audiences and brands closer together.',s3Title:'Event Marketing',s3Body:'Connect livestreaming and on-site events through content, community promotion and collaborations.',cinemaTitle:'Beyond the Venue.<br>Connected by Live.',cinemaDescription:'Bring concerts and live events to more cities and spaces through synchronized audiovisual experiences.',imageNote:'※ AI-generated concept visual. Not an actual event or partnership.',cinemaLink:'Discuss a collaboration',aboutTitle:'Beyond the Venue. Connected by Live.',aboutText:'E.DOT Entertainment connects artists, brands and audiences through live experiences and creative event solutions—from live experiences to intimate showcases and event marketing.',contactTitle:'The next great moment starts here.',contactText:'Planning a broadcast, live showcase or event collaboration? Let’s connect.',pageServicesTitle:'More ways to be there.',pageServicesLead:'From live experiences to intimate live events and event marketing, we extend every shared moment.',pageAboutTitle:'About E.DOT',aboutPunch:'Different Venues. One Shared Passion.',aboutPunchEn:'Beyond the Venue. Connected by Live.',aboutBrandIntro:'E.DOT connects artists, brands and audiences through creativity and technology, bringing live experiences to more places beyond the limits of distance.',valueConnectTitle:'Connect Communities',valueConnectBody:'Bring people who love the same stage together, online and offline.',valueExtendTitle:'Extend Venues',valueExtendBody:'Bring live experiences to more cities and spaces.',valuePassionTitle:'Keep Passion Alive',valuePassionBody:'Help every shared passion stay visible and connected.',brandStoryTitle:'Our Brand Vision',brandStoryBody:'E.DOT connects fans, content and venues through second-venue streaming, intimate showcases and event marketing—creating more live moments worth sharing.',contactRefreshTitle:'The Next Great Moment<br>Starts Here.',contactRefreshLead:'Have a second-venue broadcast, live showcase or event collaboration in mind?<br>Let’s connect.',contactTopic1:'Live Experience',contactTopic1Body:'Bring concerts and events to more venues',contactTopic2:'Live Event Planning',contactTopic2Body:'Intimate showcases, themed events and brand partnerships',contactTopic3:'Event Marketing',contactTopic3Body:'Content planning, community promotion and integrated execution',pageAboutLead:'Creative live experiences beyond a single venue.',pageVenueTitle:'Live Beyond the Venue.',pageVenueLead:'Connect audiences across cities and spaces through synchronized live experiences.',pageContactTitle:'Let’s make the next moment happen.',pageContactLead:'Have a broadcast, showcase or event marketing idea? Start the conversation with us.',detailA:'Live Experience',detailAText:'Connect the main venue with cinemas, performance spaces and other partner locations through live video and audio.',detailB:'Live Events',detailBText:'Create close-up experiences through intimate performances, branded gatherings and curated showcases.',detailC:'Event Marketing',detailCText:'Combine content planning, community engagement and online-to-offline promotion to reach new audiences.',ctaTitle:'Ready to collaborate?',ctaLabel:'Get in touch',venueHowTitle:'Live Experiences Across Venues',venueHowText:'Connect audiences in different cities and venues through synchronized live experiences. Formats depend on each event.'}};
+function setLanguage(lang){
+  document.documentElement.lang=lang==='zh'?'zh-TW':'en';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=copy[lang][el.dataset.i18n];if(v!==undefined)el.innerHTML=v});
+  ['zh','en'].forEach(id=>document.getElementById(id)?.setAttribute('aria-pressed',String(id===lang)));
+}
+function languagePath(lang){
+  const base=location.pathname.replace(/^\/en\//,'/').replace(/\/$/,'/index.html');
+  const file=base.split('/').pop()||'index.html';
+  return (lang==='en'?'/en/':'/')+(file==='index.html'?'':file);
+}
+document.getElementById('zh')?.addEventListener('click',()=>{location.href=languagePath('zh')});
+document.getElementById('en')?.addEventListener('click',()=>{location.href=languagePath('en')});
+document.getElementById('year').textContent=new Date().getFullYear();
+setLanguage(location.pathname.startsWith('/en/')?'en':'zh');
+
+
+/* V3.7: respond to real visual viewport changes, device orientation, and header wrapping. */
+(function setupAdaptiveViewport(){
+  const root = document.documentElement;
+  const header = document.querySelector('.site-header');
+  let scheduled = false;
+  function update(){
+    scheduled = false;
+    const vv = window.visualViewport;
+    const width = Math.max(1, vv ? vv.width : window.innerWidth);
+    const height = Math.max(1, vv ? vv.height : window.innerHeight);
+    const device = width >= 1920 ? 'wide' : width >= 1200 ? 'desktop' : width >= 900 ? 'laptop' : width >= 600 ? 'tablet' : 'phone';
+    root.dataset.device = device;
+    root.dataset.orient = width > height ? 'landscape' : 'portrait';
+    root.style.setProperty('--vh', `${height * 0.01}px`);
+    root.style.setProperty('--header-h', `${header ? header.getBoundingClientRect().height : 0}px`);
+  }
+  function scheduleUpdate(){
+    if(scheduled) return;
+    scheduled = true;
+    window.requestAnimationFrame(update);
+  }
+  scheduleUpdate();
+  window.addEventListener('resize', scheduleUpdate, {passive:true});
+  window.addEventListener('orientationchange', scheduleUpdate, {passive:true});
+  if(window.visualViewport){
+    window.visualViewport.addEventListener('resize', scheduleUpdate, {passive:true});
+    window.visualViewport.addEventListener('scroll', scheduleUpdate, {passive:true});
+  }
+  if(typeof ResizeObserver !== 'undefined' && header){
+    const observer = new ResizeObserver(scheduleUpdate);
+    observer.observe(header);
+  }
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleUpdate);
+})();
+
+
+// V4.4 accessible inquiry modal. Do not show success until server confirms email sending.
+(()=>{
+ const overlay=document.getElementById('edot-inquiry-overlay');
+ if(!overlay)return;
+ const dialog=overlay.querySelector('.edot-inquiry-dialog');
+ const form=overlay.querySelector('form');
+ const status=overlay.querySelector('.edot-inquiry-status');
+ const submit=overlay.querySelector('[type=submit]');
+ let previousFocus=null;
+ const en=()=>document.documentElement.lang.toLowerCase().startsWith('en');
+ const terms={zh:{title:'合作洽詢',subtitle:'留下聯絡資料及合作想法，我們會透過 Email 回覆。',name:'姓名 / 聯絡人 *',email:'電子郵件 *',type:'洽詢類型 *',message:'詢問內容 *',choose:'請選擇',live:'Live 同步展演',event:'小型展演活動',marketing:'活動行銷',other:'其他合作',consent:'我同意 E.DOT 使用以上資料回覆本次洽詢。',submit:'送出詢問',sending:'送出中…',required:'請完整填寫必填欄位，並確認同意使用資料。',success:'已送出！我們收到您的洽詢，將透過 Email 與您聯絡。',error:'暫時無法送出，請稍後重試。',placeholder:'請簡單描述合作需求、預計日期或活動規模…'},en:{title:'Send an Inquiry',subtitle:'Tell us about your collaboration idea. We will reply by email.',name:'Name / Contact person *',email:'Email address *',type:'Inquiry type *',message:'Your inquiry *',choose:'Please select',live:'Live Experience',event:'Live Event Planning',marketing:'Event Marketing',other:'Other collaboration',consent:'I agree to E.DOT using my details to respond to this inquiry.',submit:'Submit inquiry',sending:'Sending…',required:'Please complete all required fields and agree to the privacy notice.',success:'Your inquiry was sent successfully. We will respond by email.',error:'Unable to send right now. Please try again later.',placeholder:'Tell us about your event, expected date or scope…'}};
+ const setText=(selector,v)=>{const el=overlay.querySelector(selector);if(el)el.textContent=v};
+ function localize(){const t=terms[en()?'en':'zh'];[['#edot-inquiry-title','title'],['#edot-inquiry-subtitle','subtitle'],['[data-field-name]','name'],['[data-field-email]','email'],['[data-field-type]','type'],['[data-field-message]','message'],['[data-opt-first]','choose'],['[data-opt-live]','live'],['[data-opt-event]','event'],['[data-opt-marketing]','marketing'],['[data-opt-other]','other'],['[data-field-consent]','consent'],['[data-send-inquiry]','submit']].forEach(([sel,k])=>setText(sel,t[k]));overlay.querySelector('textarea').placeholder=t.placeholder;}
+ function open(ev){if(ev)ev.preventDefault();previousFocus=document.activeElement;localize();status.textContent='';overlay.hidden=false;document.body.classList.add('edot-dialog-open');overlay.querySelector('[data-close-inquiry]').focus();}
+ function close(){overlay.hidden=true;document.body.classList.remove('edot-dialog-open');previousFocus?.focus?.();}
+ document.querySelectorAll('[data-open-inquiry]').forEach(x=>x.addEventListener('click',open));
+ overlay.querySelector('[data-close-inquiry]').addEventListener('click',close);
+ overlay.addEventListener('mousedown',e=>{if(e.target===overlay)close();});
+ overlay.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='Tab'){const focusables=[...dialog.querySelectorAll('button,input:not([tabindex="-1"]),select,textarea')].filter(el=>!el.disabled);const a=focusables[0],z=focusables.at(-1);if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}});
+ form.addEventListener('submit',async e=>{
+ e.preventDefault();const t=terms[en()?'en':'zh'];status.textContent='';
+ if(!form.reportValidity()){status.textContent=t.required;return;}
+ const data=Object.fromEntries(new FormData(form).entries());
+ submit.disabled=true;submit.textContent=t.sending;
+ try{const res=await fetch('/api/inquiry',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...data,language:en()?'en':'zh'})});const outcome=await res.json().catch(()=>({}));if(!res.ok||!outcome.ok)throw new Error('send-failed');status.textContent=t.success;form.reset();}
+ catch(err){status.textContent=t.error;}
+ finally{submit.disabled=false;submit.textContent=t.submit;}
+ });
+})();

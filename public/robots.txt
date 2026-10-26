@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://edot-entertainment.com/sitemap.xml

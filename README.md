@@ -1,37 +1,28 @@
-# E.DOT Entertainment V4.2 SEO – deploy-ready static assets
+# E.DOT V4.4 — Inquiry Popup + Worker Email Backend
 
-Based on the supplied V4.1 ZIP, preserving page design, images, logo, style and brand copy.
+## Changes
+- All email/contact CTA links launch an accessible bilingual inquiry popup.
+- Fields: name, visitor email, service topic, message and privacy consent.
+- Removes the previous Copy Email fallback; no mail app required.
+- Submission posts to `POST /api/inquiry`, not a mailto link.
+- Backend uses Cloudflare `send_email` binding; success appears only after Cloudflare accepts the email.
+- SEO, images, current page paths and existing design retained.
 
-## Implemented
-- Five distinct Chinese pages and five server-rendered English pages at `/en/` (English text is in HTML, not JavaScript-only).
-- Unique title, meta description, canonical, robots, hreflang, Open Graph, Twitter Card, Organization JSON-LD for each content page.
-- `/sitemap.xml` and `/robots.txt` (10 canonical page URLs).
-- Language buttons navigate to the equivalent translated page and do not alter styles.
-- Original assets and Cloudflare Workers static assets configuration retained.
+## Important configuration before Production
+1. Email Routing destination `kfma1015@gmail.com` has been confirmed Verified by site owner. `CONTACT_DESTINATION` and the EMAIL binding `destination_address` are fixed to this Gmail. Do not change them to the `hello@` routing alias.
+2. Configure an eligible sending identity/domain in Cloudflare Email Service; change `CONTACT_SENDER` if necessary. The `From` identity must be allowed by your Cloudflare sending configuration.
+3. Deploy using **Wrangler CLI**, e.g. `npx wrangler deploy` from this directory. Static file uploads alone will NOT execute worker.js / the `/api/inquiry` endpoint. The same Worker name is retained; check custom domain `edot-entertainment.com` still points to this Worker.
+4. Confirm `POST /api/inquiry` works with the binding, then submit a test inquiry on both language versions and verify real inbox delivery. Do not consider form live before this test.
+5. Anti-spam: honeypot and validation included. For public high-volume usage, additionally configure Cloudflare Turnstile and rate limiting/WAF rules for `/api/inquiry` to prevent abuse. There is no rate limiter bundled in this release.
+6. Any email forwarding and MX/TXT DNS settings should be retained.
 
-## Deploy
-1. Unzip and in this folder run `npx wrangler deploy` after Cloudflare authentication, or upload the static assets via the Cloudflare dashboard if supported by your setup.
-2. Confirm `/`, `/en/`, `/services.html`, `/en/services.html`, `/sitemap.xml`, `/robots.txt`.
-3. Add the current property in Google Search Console and submit `/sitemap.xml`.
-4. When moving to your custom domain, replace all occurrences of `https://edot-entertainment.com` in HTML/XML/TXT with the new canonical HTTPS origin. Redirect the `workers.dev` variant to the primary host where possible.
+## Local checks
+- `node --check public/script.js` and `node --check worker.js`
+- Pages `/contact.html`, `/en/contact.html`; pop-up from header and Contact CTAs.
+- Backend errors never display a success notification.
 
-## Notes
-- No live deployment was performed.
-- Existing marketing claims and illustrative photo notices remain unchanged.
-- An English `/en/` link depends on Cloudflare static asset directory index behavior.
-- SEO metadata is only one component of search performance; indexing and rankings are not guaranteed.
+Note: This package has not been deployed to your Cloudflare account. Delivery depends on a verified recipient and allowed sender.
 
-## Recheck corrections
-- English navigation, header logo and action links now stay on English pages instead of returning to Chinese unexpectedly.
-- The Chinese and English home links use canonical `/` and `/en/` respectively.
-- The 404 page is explicitly `noindex` and has root-relative asset links.
-- For deep links, verify that Cloudflare's configured static assets serve `/en/` as the English index file after publishing.
-- Deployment and Lighthouse testing still need to be performed on the live server; HTML syntax checks alone cannot establish browser behavior.
-
-
-## V4.3: Email contact repair + production domain SEO
-- Contact Us buttons retain mailto:hello@edot-entertainment.com (requires a browser/OS mail handler).
-- Added copy-email-address fallback buttons on Chinese and English contact pages.
-- Replaced test worker hostname in canonical, hreflang, Open Graph, Organization structured data, sitemap.xml and robots.txt with https://edot-entertainment.com.
-- Before deploying, confirm hello@edot-entertainment.com exists and receives messages. mailto does not create an inbox.
-- Deploy as existing Workers static assets project. Do not change MX/TXT email routing records when deploying this update.
+## Read before deploy
+- Cloudflare Free permits sending to account-verified destinations, but the **sender domain/identity must also be authorized**. `CONTACT_SENDER` is currently `hello@edot-entertainment.com`; an E_SENDER_NOT_VERIFIED or E_SENDER_DOMAIN_NOT_AVAILABLE error means Cloudflare sender/domain setup is required. Do not upgrade the plan solely on the basis of the Email Sending landing page without testing available binding functionality.
+- Deploy through `npx wrangler deploy` (requires Node.js and Cloudflare login); simply uploading `public/` omits the `/api/inquiry` backend.
