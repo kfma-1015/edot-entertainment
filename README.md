@@ -26,3 +26,10 @@ Note: This package has not been deployed to your Cloudflare account. Delivery de
 ## Read before deploy
 - Cloudflare Free permits sending to account-verified destinations, but the **sender domain/identity must also be authorized**. `CONTACT_SENDER` is currently `hello@edot-entertainment.com`; an E_SENDER_NOT_VERIFIED or E_SENDER_DOMAIN_NOT_AVAILABLE error means Cloudflare sender/domain setup is required. Do not upgrade the plan solely on the basis of the Email Sending landing page without testing available binding functionality.
 - Deploy through `npx wrangler deploy` (requires Node.js and Cloudflare login); simply uploading `public/` omits the `/api/inquiry` backend.
+
+
+## Typography update — Helvetica
+- English and Latin characters now prefer Helvetica, falling back to Arial.
+- Chinese glyphs continue to use Noto Sans TC (or a system CJK font).
+- Logo images, layouts, SEO metadata, inquiry popup and Worker settings unchanged.
+- Requires Helvetica to be installed on the visitor's device for an exact Helvetica rendering; no proprietary font file is bundled.
