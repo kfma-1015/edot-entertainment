@@ -189,3 +189,67 @@ body>footer{flex-shrink:0;margin-top:auto}
  .page-contact .contact-section.page-contact{min-height:0;padding-block:32px}
  .page-second-venue .cinema-picture img{max-height:none}
 }
+
+/* V4.0: confirmed About / Contact design. Other pages retain V3.7 styling. */
+.edot-accent-line{width:40px;height:2px;background:linear-gradient(90deg,#ff267c,#ff8247);margin:16px 0 20px}
+.edot-about-hero{min-height:clamp(440px,60svh,700px);display:grid;grid-template-columns:minmax(0,1.12fr) minmax(250px,.88fr);align-items:center;position:relative;overflow:hidden;padding:clamp(35px,5vw,75px) clamp(25px,5vw,80px);background:radial-gradient(ellipse at 0% 0%,#ffd7e5 0%,transparent 45%),radial-gradient(ellipse at 95% 95%,#ffd1c7 0%,transparent 48%),#fff9f8}
+.edot-about-copy{position:relative;z-index:2;max-width:740px}
+.edot-about-copy h1{font-size:clamp(34px,4vw,60px);margin:12px 0 8px;line-height:1.2}
+.edot-about-copy h2{font-size:clamp(27px,3vw,45px);line-height:1.3;margin:0 0 4px}
+.edot-about-copy p{font-size:clamp(14px,1.3vw,18px);line-height:1.85;color:#495467;max-width:590px}
+.edot-about-copy .edot-english-tagline{font-size:clamp(13px,1.2vw,18px);margin:0 0 20px}
+.edot-hero-e{position:relative;display:grid;place-items:center;min-width:0}
+.edot-hero-e:before{content:"";position:absolute;width:135%;height:135%;border:1px solid #ffffffbb;border-radius:50%;transform:rotate(-25deg) scaleY(.65)}
+.edot-hero-e img{width:min(100%,440px);height:auto;mix-blend-mode:multiply;filter:drop-shadow(0 22px 30px #ff799a33);opacity:.9}
+.edot-values{max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:32px clamp(18px,4vw,55px)}
+.edot-values article{text-align:center;padding:15px 22px;border-right:1px solid #f2dce3}
+.edot-values article:last-child{border-right:0}
+.edot-value-icon{font-size:39px;color:#ff3590;line-height:1.2}
+.edot-values h3{font-size:20px;margin:12px 0 10px}
+.edot-values p{font-size:14px;line-height:1.8;color:#6a7482;margin:0 auto;max-width:310px}
+.edot-brand-story{max-width:1360px;margin:0 auto 45px;padding:clamp(20px,2.6vw,38px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:25px;align-items:center;border-radius:24px;background:linear-gradient(115deg,#fff4f6,#fff7f5)}
+.edot-brand-story h2{font-size:clamp(27px,3vw,40px);margin:10px 0}
+.edot-brand-story p{font-size:clamp(14px,1.3vw,17px);line-height:1.95;color:#556171;max-width:570px}
+.edot-brand-story img{width:100%;height:clamp(220px,26vw,350px);object-fit:cover;border-radius:18px}
+.edot-contact-hero{min-height:clamp(450px,62svh,760px);display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;background:radial-gradient(ellipse at 18% 70%,#ffe0eb,transparent 52%),#fff9fa}
+.edot-contact-copy{z-index:1;align-self:center;padding:clamp(35px,5vw,70px) clamp(20px,5vw,80px)}
+.edot-contact-copy h1{font-size:clamp(34px,4vw,62px);line-height:1.25;letter-spacing:-.03em;margin:12px 0}
+.edot-contact-copy p{font-size:clamp(14px,1.35vw,18px);line-height:1.85;color:#56606e}
+.edot-contact-mail{display:inline-block;margin-top:18px;max-width:100%;overflow-wrap:anywhere}
+.edot-contact-photo{min-height:360px;background:linear-gradient(90deg,#fff9fa 0%,#fff9fa55 18%,transparent 48%),url("assets/cinema-second-venue.jpg") center/cover no-repeat;border-radius:45% 0 0 45%}
+.edot-contact-topics{max-width:1360px;margin:0 auto 35px;padding:18px clamp(18px,4vw,40px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.edot-contact-topics article{display:flex;gap:16px;align-items:center;background:#fff7f8;padding:20px;border-radius:17px;min-width:0}
+.edot-contact-topics article>span{color:#ff3692;font-size:29px}
+.edot-contact-topics h2{font-size:17px;margin:0 0 6px}
+.edot-contact-topics p{font-size:12px;line-height:1.7;color:#67717c;margin:0}
+@media(max-width:900px){.edot-about-hero{grid-template-columns:1fr;gap:5px;min-height:0}.edot-hero-e{position:absolute;right:-35px;top:12px;width:44%;opacity:.22}.edot-hero-e img{width:100%}.edot-about-copy{padding:25px 0}.edot-brand-story{margin-inline:18px}.edot-contact-hero{grid-template-columns:1fr}.edot-contact-photo{order:-1;min-height:250px;border-radius:0;background-position:center}.edot-contact-copy{padding:30px 24px 45px}.edot-contact-topics{grid-template-columns:1fr}.edot-values{gap:0}}
+@media(max-width:620px){.edot-about-hero{padding:36px 22px 48px}.edot-about-copy h1{font-size:32px}.edot-about-copy h2{font-size:29px}.edot-hero-e{width:65%;top:5px;right:-45px;opacity:.16}.edot-values{grid-template-columns:1fr;padding:12px 20px}.edot-values article{border-right:0;border-bottom:1px solid #f2dce3;padding:22px}.edot-values article:last-child{border-bottom:0}.edot-brand-story{grid-template-columns:1fr;padding:22px;margin:12px 14px 35px}.edot-brand-story img{height:210px}.edot-contact-photo{min-height:220px}.edot-contact-copy h1{font-size:35px}.edot-contact-mail{font-size:12px;padding:13px 14px}.edot-contact-topics{padding-inline:14px}}
+@media(min-width:1920px){.edot-about-hero{min-height:610px}.edot-values,.edot-brand-story,.edot-contact-topics{max-width:1640px}}
+
+/* V4.1 About-only: transparent approved E.DOT identity in the hero. */
+.page-about .edot-about-hero{grid-template-columns:minmax(0,1.06fr) minmax(270px,.94fr);gap:clamp(22px,4vw,80px)}
+.page-about .edot-about-brandmark{position:relative;isolation:isolate;z-index:1;width:100%;min-width:0;min-height:220px;display:flex;align-items:center;justify-content:center;padding:clamp(6px,1.5vw,24px)}
+.page-about .edot-about-brandmark:before{z-index:-1;pointer-events:none;width:122%;height:130%;border-radius:50%;opacity:.65}
+.page-about .edot-about-brandmark img{width:100%;max-width:550px;height:auto;object-fit:contain;display:block;mix-blend-mode:normal;filter:drop-shadow(0 18px 30px rgba(247,66,139,.12));opacity:1}
+@media(max-width:900px){
+ .page-about .edot-about-hero{grid-template-columns:1fr}
+ .page-about .edot-about-brandmark{position:relative;top:auto;right:auto;width:min(80%,430px);min-height:0;margin:0 auto 4px;padding:6px;opacity:1}
+ .page-about .edot-about-brandmark img{width:100%}
+}
+@media(max-width:620px){
+ .page-about .edot-about-brandmark{width:min(92%,360px);margin-top:0;opacity:1}
+ .page-about .edot-about-copy{padding:12px 0}
+}
+
+/* About virtual concert artwork: replaces ONLY the hero logo mark. */
+.page-about .edot-about-hero{grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(22px,4vw,68px);isolation:isolate}
+.page-about .edot-about-concert-art{position:relative;z-index:1;margin:0;width:100%;min-width:0;max-width:760px;justify-self:center;align-self:center;border-radius:26px;overflow:hidden;box-shadow:0 26px 55px rgba(78,24,80,.19);background:#241332;aspect-ratio:1.32}
+.page-about .edot-about-concert-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:56% center}
+.page-about .edot-about-concert-art:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 65%,rgba(17,10,27,.53))}
+.page-about .edot-about-concert-art figcaption{position:absolute;z-index:2;left:22px;bottom:20px;color:white;font-size:11px;font-weight:700;letter-spacing:.16em;text-shadow:0 1px 6px #100c20}
+.page-about .edot-about-concert-art figcaption span{color:#ff709d}
+@media(max-width:900px){.page-about .edot-about-hero{grid-template-columns:1fr;gap:4px}.page-about .edot-about-concert-art{width:min(100%,680px);aspect-ratio:1.75;margin:0 auto 15px}}
+@media(max-width:620px){.page-about .edot-about-concert-art{aspect-ratio:1.33;border-radius:18px}.page-about .edot-about-concert-art figcaption{font-size:9px;left:13px;bottom:12px}}
+
+/* V4.1 copy refinement: AI visual disclaimers consistently 8pt (~10.67px). */
+.photo-note,.page-home .photo-note,.cinema-text .disclaimer,.page-second-venue .cinema-text .disclaimer{font-size:8pt!important;line-height:1.45;}
