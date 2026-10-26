@@ -1,12 +1,13 @@
-# E.DOT Entertainment V3.3 — Screenshot Layout Preview
+# E.DOT Entertainment V3.5 — 五頁式網站預覽
 
-依照使用者提供的畫面重新製作：白色頂部導覽、左側主標語、右側電影院演唱會視覺、橫向三張服務卡片。
+- `index.html` 首頁
+- `services.html` 服務項目
+- `about.html` 關於我們
+- `second-venue.html` 第二現場
+- `contact.html` 聯絡我們
 
-- 開啟 `index.html` 可直接本機預覽，不需部署。
-- 已保留柔和 E Logo、粉橘色系、中英文切換、hello@edot-entertainment.com。
-- 已移除所有區塊/服務 01、02、03 編號。
-- 使用先前 AI 生成的電影院情境圖（柔焦版）；非實際合作案例。
-- 未新增不存在的社群帳號或案例。
-- 保留 wrangler.jsonc 作為未來 Workers 部署設定；本版並未部署。
+下載後解壓縮，開啟 `index.html`；導覽列可切換獨立頁面，語言切換會保留選擇（瀏覽器若限制 `file://` 儲存，頁面載入時可能重設語言）。
 
-V3.4：語言切換按鈕顯示文字由 ZH 改為「中文」，保留原有切換功能與設計。
+Logo、電影院 AI 情境圖及整體品牌色沿用 V3.4。尚未部署。
+
+**注意**：若決定部署，請先確認 Cloudflare Workers 所使用的 Wrangler 版本支援靜態資源與 `not_found_handling`。
