@@ -22,38 +22,170 @@
 @media(max-width:900px){.detail-grid{grid-template-columns:1fr}.page-banner{padding:65px 22px 55px}}
 @media(max-width:600px){.page-content{padding:28px 16px 55px}.page-banner{padding:55px 18px}.detail{padding:22px}}
 
-/* V3.6 responsive / all-device optimisation */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* V3.6 – fluid five-page layout and accessible device breakpoints */
+:root{--header-limit:1440px}
+html,body{max-width:100%;overflow-x:clip}
+body{min-width:280px}
 img,svg{max-width:100%}
-.site-header{padding-left:max(clamp(18px,4vw,66px),env(safe-area-inset-left));padding-right:max(clamp(18px,4vw,66px),env(safe-area-inset-right))}
-footer{padding-bottom:max(24px,env(safe-area-inset-bottom))}
-a:focus-visible,button:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:8px}
-.lang-switch button{min-height:36px}
-.card-head>div{min-width:0}
-.card-head h3{white-space:normal;overflow-wrap:anywhere}
-.hero{min-height:min(505px,80svh)}
-.page-banner h1,.hero h1,.cinema-text h2,.about-section h2,.contact-section h2{overflow-wrap:anywhere}
-@media(hover:none){.service-card:hover{transform:none;box-shadow:0 9px 26px rgba(20,20,30,.035)}}
-@media(min-width:901px){.site-header{position:sticky;top:0;box-shadow:0 1px 0 var(--line)}html{scroll-padding-top:90px}}
-@media(min-width:1700px){.hero{min-height:620px}.hero-copy{padding-left:max(80px,calc((100vw - 1600px)/2))}}
-@media(max-width:1250px){.hero h1{white-space:normal}}
-@media(min-width:901px) and (max-width:1100px){.service-card{padding:18px}.card-head{gap:12px}.service-icon{width:52px;height:52px}.service-icon svg{width:30px;height:30px}.card-head h3{font-size:17px}.service-english{font-size:13px}.round-arrow{width:30px;height:30px}}
-@media(max-width:900px){
-.header-actions{margin-left:auto}
-.site-nav{overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.site-nav::-webkit-scrollbar{display:none}
-.site-nav a{flex:none;scroll-snap-align:center;min-height:44px;display:inline-flex;align-items:center;padding:0 4px}
-.hero{min-height:560px}
-.page-content{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.site-header{gap:clamp(12px,2vw,28px);padding-inline:clamp(16px,3vw,48px)}
+.site-logo{flex-shrink:0}.site-logo img{width:clamp(112px,11vw,150px)}
+.site-nav{min-width:0;gap:clamp(10px,1.5vw,26px)}
+.site-nav a{font-size:clamp(12px,.95vw,14px)}
+.header-email{min-width:0;padding:10px 16px}
+/* Home = brand + visual + navigation only, no duplicated services. */
+.page-home main{display:flex;min-height:calc(100svh - 142px)}
+.page-home .hero{width:100%;min-height:min(700px,calc(100svh - 140px))}
+.page-home .hero-copy{width:min(57%,730px);padding-right:22px}
+.page-home .hero h1{font-size:clamp(35px,3.8vw,62px);white-space:normal;overflow-wrap:break-word}
+.page-home .hero-description{max-width:540px}
+/* Inner-page compact headings; each page keeps a natural scroll if content exceeds device height. */
+.page-banner{padding:clamp(36px,5.5vw,68px) clamp(18px,5vw,72px) clamp(30px,4vw,52px)}
+.page-banner h1{font-size:clamp(30px,4.1vw,56px);overflow-wrap:anywhere}
+.page-banner p{font-size:clamp(14px,1.45vw,18px)}
+.page-content{width:min(100%,1240px);padding:clamp(24px,3vw,42px) clamp(16px,3vw,40px) clamp(36px,5vw,70px)}
+.page-cta{padding:clamp(28px,3.5vw,48px) 18px clamp(34px,4vw,60px)}
+.page-cta h2{font-size:clamp(21px,2.5vw,32px);margin:0 0 8px}
+/* Preserve image composition without forcing an oversized two-column image. */
+.page-second-venue .page-content{width:min(100%,1360px)}
+.page-second-venue .cinema-section{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(24px,4vw,62px);padding:clamp(18px,3vw,44px);margin:0;border-radius:22px;align-items:center}
+.page-second-venue .cinema-picture{min-width:0;max-width:100%;border-radius:18px;background:#221d26;box-shadow:0 10px 24px #17203412}
+.page-second-venue .cinema-picture img{display:block;width:100%;height:auto;max-height:min(52svh,480px);object-fit:contain}
+.page-second-venue .cinema-text{min-width:0}
+.page-second-venue .cinema-text h2{font-size:clamp(25px,2.9vw,43px);margin:12px 0}
+.page-second-venue .cinema-text p{font-size:clamp(14px,1.2vw,16px);line-height:1.8}
+.page-second-venue .about-section{padding:clamp(30px,4vw,60px) 18px}
+/* Services own the card grid, and only this page displays it. */
+.page-services .service-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.page-services .service-card{min-width:0;padding:clamp(16px,2vw,26px)}
+.page-services .card-head h3{white-space:normal;font-size:clamp(17px,1.5vw,21px)}
+.page-services .service-card p{padding-left:0}
+/* About and contact avoid oversized whitespace on laptop displays. */
+.page-about .about-section.page-about{padding:clamp(24px,4vw,45px) 18px}
+.page-contact .contact-section.page-contact{min-height:clamp(270px,38svh,440px);padding:clamp(32px,5vw,70px) 20px}
+/* Tablet: give navigation its own row; change second venue to vertical. */
+@media(max-width:1100px){
+ .site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;row-gap:8px}
+ .site-logo{grid-column:1;grid-row:1}
+ .header-actions{grid-column:2;grid-row:1}
+ .site-nav{grid-column:1/-1;grid-row:2;justify-content:center;flex-wrap:wrap;gap:8px clamp(14px,3vw,27px)}
+ .site-nav a{padding:8px 0}
+ .header-email{display:none}
+ .page-home .hero-copy{width:min(65%,720px)}
+ .page-services .service-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .page-second-venue .cinema-section{grid-template-columns:1fr;gap:22px}
+ .page-second-venue .cinema-picture img{max-height:400px}
 }
-@media(max-width:600px){
-.hero{min-height:560px}
-.hero-cta .btn-gradient,.hero-cta .btn-outline{width:100%}
-.page-cta .btn-gradient,.contact-button{width:100%;max-width:420px}
-.cinema-section{gap:20px}
-.page-banner h1{font-size:clamp(30px,9vw,40px)}
+@media(max-width:680px){
+ .site-header{padding:12px 16px;column-gap:10px;row-gap:8px}
+ .site-logo img{width:112px}
+ .lang-switch button{padding:7px 11px}
+ .site-nav{width:100%;justify-content:space-around;gap:4px 12px;overflow:visible}
+ .site-nav a{padding:8px 0;font-size:12px;white-space:normal;text-align:center}
+ .page-home main{min-height:0;display:block}
+ .page-home .hero{min-height:640px;min-height:max(620px,calc(100svh - 130px));background-position:60% center;align-items:flex-start}
+ .page-home .hero-backdrop{background:linear-gradient(180deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.95) 47%,rgba(255,255,255,.51) 73%,rgba(18,12,22,.08) 100%)}
+ .page-home .hero-copy{width:100%;max-width:none;padding:clamp(30px,7vw,54px) 20px 160px}
+ .page-home .hero h1{font-size:clamp(33px,8vw,44px);line-height:1.3;white-space:normal}
+ .page-home .hero-en{font-size:clamp(20px,5.5vw,25px)}
+ .page-home .hero-cta{gap:10px}
+ .page-home .btn-gradient,.page-home .btn-outline{min-height:46px;padding:12px 16px;font-size:12px}
+ .photo-note{right:8px;bottom:8px;max-width:90%;font-size:9px}
+ .page-banner{padding:38px 18px 30px}
+ .page-banner h1{font-size:clamp(28px,8vw,40px)}
+ .page-banner p{font-size:14px;line-height:1.7}
+ .page-content{padding:22px 15px 38px}
+ .page-services .service-cards{grid-template-columns:1fr}
+ .page-services .service-card p{font-size:14px;line-height:1.75}
+ .page-second-venue .cinema-section{padding:14px;gap:20px;border-radius:15px}
+ .page-second-venue .cinema-picture{border-radius:12px}
+ .page-second-venue .cinema-picture img{height:auto;max-height:300px;object-fit:contain}
+ .page-second-venue .cinema-text h2{font-size:clamp(24px,6vw,32px)}
+ .page-second-venue .cinema-text h2 br{display:none}
+ .page-second-venue .about-section{padding:28px 14px}
+ .page-contact .contact-section.page-contact{min-height:0;padding:42px 18px}
+ .contact-button{max-width:100%;font-size:12px}
+ footer{padding:18px 15px;line-height:1.7}
 }
-@media(max-width:360px){.logo img,.site-logo img{width:104px}.lang-switch button{padding:6px 10px}.service-icon{width:48px;height:48px}.service-icon svg{width:26px}.card-head h3{font-size:16px}}
-@media(max-height:500px) and (orientation:landscape){.hero{min-height:auto}.hero-copy{padding:36px 0 40px clamp(24px,5vw,80px)}.page-banner{padding:44px 24px 36px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:360px){
+ .site-nav{justify-content:center;gap:2px 13px}
+ .site-nav a{font-size:11px}
+ .hero-cta a{width:100%}
+ .page-home .hero-copy{padding-inline:15px}
+ .page-home .hero h1{font-size:32px}
+}
+
+
+/* V3.7: dynamic fit per browser viewport; five stand-alone content pages. */
+:root{--vh:1vh;--header-h:78px;--page-gutter:clamp(16px,3.5vw,72px)}
+html{scroll-padding-top:var(--header-h)}
+body{display:flex;flex-direction:column;min-height:100vh;min-height:calc(var(--vh)*100)}
+.site-header{flex:0 0 auto}
+body>main{flex:1 0 auto;min-width:0}
+body>footer{flex-shrink:0;margin-top:auto}
+/* Home first fold: fill the available viewport but never crop content to a fixed height. */
+.page-home main{display:block;min-height:0}
+.page-home .hero{min-height:clamp(480px,calc(var(--vh)*100 - var(--header-h)),920px);height:auto}
+.page-home .hero-copy{max-width:100%;min-width:0}
+.page-home .hero h1{overflow-wrap:break-word}
+/* Other pages: comfortable natural scrolling with a footer at the bottom. */
+.page-banner{max-width:100%}
+.page-content,.cinema-section,.cinema-picture,.cinema-text{min-width:0}
+.page-contact main{display:flex;flex-direction:column}
+.page-contact .contact-section.page-contact{flex:1 0 auto;min-height:0;justify-content:center}
+.page-second-venue .cinema-picture img{height:auto;max-height:min(45vh,calc(var(--vh)*45));object-fit:contain}
+/* Increase scale and white-space utilization on 1920+ displays. */
+@media(min-width:1920px){
+ .site-header{padding-inline:clamp(60px,4vw,108px);gap:32px}
+ .site-logo img{width:190px}
+ .site-nav{gap:clamp(23px,1.8vw,48px)}
+ .site-nav a{font-size:17px}
+ .lang-switch button{font-size:16px;padding:9px 18px}
+ .header-email{padding:15px 26px}
+ .header-email strong{font-size:17px}
+ .header-email small{font-size:13px}
+ .page-home .hero-copy{width:min(56%,900px);padding-left:clamp(78px,6vw,144px)}
+ .page-home .hero h1{font-size:clamp(68px,4vw,88px)}
+ .hero-en{font-size:clamp(38px,2.3vw,52px)}
+ .hero-description{font-size:20px;max-width:720px}
+ .btn-gradient,.btn-outline{font-size:18px;padding:18px 30px}
+ .page-banner h1{font-size:clamp(64px,3.8vw,82px)}
+ .page-banner p{font-size:23px;max-width:990px}
+ .page-content{width:min(100%,1680px);max-width:1680px;padding-inline:72px}
+ .page-second-venue .page-content{width:min(100%,1750px);max-width:1750px}
+ .service-card p,.detail p,.cinema-text p,.about-section p,.contact-section p{font-size:20px}
+ .services-heading h2{font-size:38px}
+ .card-head h3{font-size:25px}
+ .page-contact .contact-section h2{font-size:55px}
+ footer{font-size:15px}
+}
+@media(min-width:2560px){
+ .site-logo img{width:230px}
+ .site-nav a{font-size:20px}
+ .page-home .hero-copy{width:min(57%,1110px);padding-left:7vw}
+ .page-home .hero h1{font-size:clamp(84px,4.2vw,114px)}
+ .hero-en{font-size:60px}
+ .hero-description{font-size:25px;max-width:900px}
+ .page-banner h1{font-size:98px}
+ .page-banner p{font-size:28px}
+ .page-content{max-width:2160px;width:min(100%,2160px);padding-inline:96px}
+ .page-second-venue .page-content{max-width:2200px;width:min(100%,2200px)}
+ .service-card p,.detail p,.cinema-text p,.about-section p,.contact-section p{font-size:24px}
+ .page-second-venue .cinema-picture img{max-height:min(54vh,calc(var(--vh)*54))}
+ .btn-gradient,.btn-outline{font-size:21px;padding:22px 38px}
+}
+/* Phone portrait has its own first-fold minimum, with natural overflow if content is taller. */
+@media(max-width:599px){
+ .page-home .hero{min-height:max(560px,calc(var(--vh)*100 - var(--header-h)));height:auto}
+ .page-home .hero-copy{padding-bottom:160px}
+ .page-second-venue .cinema-picture img{max-height:min(37vh,calc(var(--vh)*37));height:auto}
+ .page-contact .contact-section.page-contact{padding-block:clamp(48px,9vh,94px)}
+}
+/* Landscape phones: never force a 560px photo-filled hero into the short visible area. */
+@media(max-height:500px) and (orientation:landscape){
+ .page-home .hero{height:auto;min-height:0}
+ .page-home .hero-copy{padding-top:28px;padding-bottom:80px}
+ .page-home .hero h1{font-size:clamp(30px,4.5vw,48px)}
+ .page-contact .contact-section.page-contact{min-height:0;padding-block:32px}
+ .page-second-venue .cinema-picture img{max-height:none}
+}
