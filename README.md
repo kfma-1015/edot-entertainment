@@ -13,7 +13,7 @@ Based on the supplied V4.1 ZIP, preserving page design, images, logo, style and 
 1. Unzip and in this folder run `npx wrangler deploy` after Cloudflare authentication, or upload the static assets via the Cloudflare dashboard if supported by your setup.
 2. Confirm `/`, `/en/`, `/services.html`, `/en/services.html`, `/sitemap.xml`, `/robots.txt`.
 3. Add the current property in Google Search Console and submit `/sitemap.xml`.
-4. When moving to your custom domain, replace all occurrences of `https://edot-entertainment.kfma1015.workers.dev` in HTML/XML/TXT with the new canonical HTTPS origin. Redirect the `workers.dev` variant to the primary host where possible.
+4. When moving to your custom domain, replace all occurrences of `https://edot-entertainment.com` in HTML/XML/TXT with the new canonical HTTPS origin. Redirect the `workers.dev` variant to the primary host where possible.
 
 ## Notes
 - No live deployment was performed.
@@ -27,3 +27,11 @@ Based on the supplied V4.1 ZIP, preserving page design, images, logo, style and 
 - The 404 page is explicitly `noindex` and has root-relative asset links.
 - For deep links, verify that Cloudflare's configured static assets serve `/en/` as the English index file after publishing.
 - Deployment and Lighthouse testing still need to be performed on the live server; HTML syntax checks alone cannot establish browser behavior.
+
+
+## V4.3: Email contact repair + production domain SEO
+- Contact Us buttons retain mailto:hello@edot-entertainment.com (requires a browser/OS mail handler).
+- Added copy-email-address fallback buttons on Chinese and English contact pages.
+- Replaced test worker hostname in canonical, hreflang, Open Graph, Organization structured data, sitemap.xml and robots.txt with https://edot-entertainment.com.
+- Before deploying, confirm hello@edot-entertainment.com exists and receives messages. mailto does not create an inbox.
+- Deploy as existing Workers static assets project. Do not change MX/TXT email routing records when deploying this update.

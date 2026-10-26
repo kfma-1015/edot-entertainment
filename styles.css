@@ -253,3 +253,10 @@ body>footer{flex-shrink:0;margin-top:auto}
 
 /* V4.1 copy refinement: AI visual disclaimers consistently 8pt (~10.67px). */
 .photo-note,.page-home .photo-note,.cinema-text .disclaimer,.page-second-venue .cinema-text .disclaimer{font-size:8pt!important;line-height:1.45;}
+
+/* Email contact fallback: original layout and gradient email CTA unchanged */
+.edot-email-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:13px}
+.edot-copy-email{border:1px solid #dd6b90;background:#fff;color:#9f285a;cursor:pointer;border-radius:99px;padding:10px 17px;font-size:13px;font-weight:700}
+.edot-copy-email:hover,.edot-copy-email:focus-visible{background:#fff1f5;outline-offset:3px}
+.edot-copy-status{font-size:13px;color:#586574}
+.edot-email-help{font-size:12px!important;line-height:1.6!important;color:#6a717b!important;margin:10px 0 0!important}

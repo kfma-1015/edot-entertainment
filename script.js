@@ -49,3 +49,17 @@ setLanguage(location.pathname.startsWith('/en/')?'en':'zh');
   }
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleUpdate);
 })();
+
+// Accessible copy-to-clipboard fallback for environments without a mailto handler.
+document.querySelectorAll('[data-copy-email]').forEach(button=>button.addEventListener('click',async()=>{
+  const value=button.getAttribute('data-copy-email');
+  const english=document.documentElement.lang==='en';
+  const status=button.parentElement.querySelector('.edot-copy-status');
+  let copied=false;
+  try { if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(value);copied=true;} }catch(e){}
+  if(!copied){
+    const input=document.createElement('textarea');input.value=value;input.style.position='fixed';input.style.opacity='0';document.body.appendChild(input);input.select();
+    try{copied=document.execCommand('copy')}catch(e){}input.remove();
+  }
+  if(status)status.textContent=copied?(english?'Copied! Paste it into your email app.':'已複製！請貼到你的郵件程式。'):(english?'Please select and copy the email address above.':'無法自動複製，請選取上方信箱地址。');
+}));
