@@ -21,3 +21,39 @@
 .image-credit{font-size:12px;color:#7c8490;text-align:right;margin-top:8px}
 @media(max-width:900px){.detail-grid{grid-template-columns:1fr}.page-banner{padding:65px 22px 55px}}
 @media(max-width:600px){.page-content{padding:28px 16px 55px}.page-banner{padding:55px 18px}.detail{padding:22px}}
+
+/* V3.6 responsive / all-device optimisation */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+.site-header{padding-left:max(clamp(18px,4vw,66px),env(safe-area-inset-left));padding-right:max(clamp(18px,4vw,66px),env(safe-area-inset-right))}
+footer{padding-bottom:max(24px,env(safe-area-inset-bottom))}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:8px}
+.lang-switch button{min-height:36px}
+.card-head>div{min-width:0}
+.card-head h3{white-space:normal;overflow-wrap:anywhere}
+.hero{min-height:min(505px,80svh)}
+.page-banner h1,.hero h1,.cinema-text h2,.about-section h2,.contact-section h2{overflow-wrap:anywhere}
+@media(hover:none){.service-card:hover{transform:none;box-shadow:0 9px 26px rgba(20,20,30,.035)}}
+@media(min-width:901px){.site-header{position:sticky;top:0;box-shadow:0 1px 0 var(--line)}html{scroll-padding-top:90px}}
+@media(min-width:1700px){.hero{min-height:620px}.hero-copy{padding-left:max(80px,calc((100vw - 1600px)/2))}}
+@media(max-width:1250px){.hero h1{white-space:normal}}
+@media(min-width:901px) and (max-width:1100px){.service-card{padding:18px}.card-head{gap:12px}.service-icon{width:52px;height:52px}.service-icon svg{width:30px;height:30px}.card-head h3{font-size:17px}.service-english{font-size:13px}.round-arrow{width:30px;height:30px}}
+@media(max-width:900px){
+.header-actions{margin-left:auto}
+.site-nav{overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.site-nav::-webkit-scrollbar{display:none}
+.site-nav a{flex:none;scroll-snap-align:center;min-height:44px;display:inline-flex;align-items:center;padding:0 4px}
+.hero{min-height:560px}
+.page-content{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+}
+@media(max-width:600px){
+.hero{min-height:560px}
+.hero-cta .btn-gradient,.hero-cta .btn-outline{width:100%}
+.page-cta .btn-gradient,.contact-button{width:100%;max-width:420px}
+.cinema-section{gap:20px}
+.page-banner h1{font-size:clamp(30px,9vw,40px)}
+}
+@media(max-width:360px){.logo img,.site-logo img{width:104px}.lang-switch button{padding:6px 10px}.service-icon{width:48px;height:48px}.service-icon svg{width:26px}.card-head h3{font-size:16px}}
+@media(max-height:500px) and (orientation:landscape){.hero{min-height:auto}.hero-copy{padding:36px 0 40px clamp(24px,5vw,80px)}.page-banner{padding:44px 24px 36px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

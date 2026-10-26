@@ -1,4 +1,4 @@
-# E.DOT Entertainment V3.5 — 五頁式網站預覽
+# E.DOT Entertainment V3.6 (RWD) — 五頁式網站預覽
 
 - `index.html` 首頁
 - `services.html` 服務項目
